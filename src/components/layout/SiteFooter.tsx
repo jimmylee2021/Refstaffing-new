@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import siteLogo from '../../assets/Group 435.svg'
 
 function SiteFooter() {
   const [question, setQuestion] = useState('')
@@ -15,8 +16,7 @@ function SiteFooter() {
       <div className="footer-main">
         <div className="footer-brand">
           <div className="footer-brand-heading">
-            <img src="/assets/ref-staffing-footer.png" alt="" />
-            <strong>Ref Staffing Ltd</strong>
+            <img className="footer-brand-logo" src={siteLogo} alt="Ref Staffing Ltd" />
           </div>
           <p>Healthcare and Social Care Staffing<br />Leicester, England</p>
         </div>

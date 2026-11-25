@@ -30,17 +30,11 @@
   text-decoration: none;
 }
 
-.brand span {
-  font-size: 20px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.brand-mark {
-  border-radius: 50%;
+.brand-logo {
+  display: block;
   height: 92px;
-  object-fit: cover;
-  width: 92px;
+  max-width: 100%;
+  width: 299px;
 }
 
 .main-nav {
@@ -70,6 +64,10 @@
 .main-nav > a:hover,
 .category-menu > button:hover,
 .footer-column a:hover {
+  color: var(--teal);
+}
+
+.main-nav > a[aria-current='page'] {
   color: var(--teal);
 }
 
@@ -445,21 +443,18 @@
   gap: 16px;
 }
 
-.footer-brand-heading img {
-  height: 50px;
-  object-fit: contain;
-  width: 52px;
-}
-
-.footer-brand-heading strong {
-  font-size: 22px;
-  font-weight: 800;
+.footer-brand-logo {
+  display: block;
+  filter: brightness(0) invert(1);
+  height: auto;
+  max-width: 100%;
+  width: 248px;
 }
 
 .footer-brand > p {
   font-size: 15px;
   line-height: 1.6;
-  margin: 12px 0 0 68px;
+  margin: 12px 0 0;
 }
 
 .footer-column,
@@ -582,13 +577,9 @@
     flex-basis: auto;
   }
 
-  .brand-mark {
-    height: 78px;
-    width: 78px;
-  }
-
-  .brand span {
-    font-size: 17px;
+  .brand-logo {
+    height: auto;
+    width: 250px;
   }
 
   .main-nav {
@@ -632,9 +623,9 @@
     top: 0;
   }
 
-  .brand-mark {
-    height: 68px;
-    width: 68px;
+  .brand-logo {
+    height: auto;
+    width: 240px;
   }
 
   .menu-toggle {
@@ -761,13 +752,9 @@
     gap: 8px;
   }
 
-  .brand-mark {
-    height: 60px;
-    width: 60px;
-  }
-
-  .brand span {
-    font-size: 15px;
+  .brand-logo {
+    height: auto;
+    width: min(220px, calc(100vw - 90px));
   }
 
   .hero {
@@ -877,10 +864,6 @@
 
   .footer-brand {
     grid-column: 1 / -1;
-  }
-
-  .footer-brand-heading strong {
-    font-size: 20px;
   }
 
   .footer-contact {
